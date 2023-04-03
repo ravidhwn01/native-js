@@ -142,9 +142,9 @@ console.log(favColor);
 
 const array = ["hello", "my", "name", "is", "kalu"];
 const person = {
-  personName: "ram singh",
-  age: 34,
-  workingHours: 9,
+  apple: 1,
+  bats: 2,
+  dogs: 3,
 };
 
 const str = _.reduce(array, (pre: any, curr) => {
@@ -154,10 +154,7 @@ const str = _.reduce(array, (pre: any, curr) => {
 });
 console.log(str);
 
-const filledData = _.reduce(
-  person,
-  (pre: any, cur) => {
-    return;
-  },
-  0
-);
+const filledData = _.reduce(person, (pre, cur) => {
+  return pre + cur;
+});
+console.log(filledData);
