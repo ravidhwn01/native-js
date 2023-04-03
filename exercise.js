@@ -120,3 +120,47 @@ const {fullname,age,city} =  user
 console.log(fullname)
 console.log(age)
 console.log(city)
+
+// 11. Rename extracted property of object while destructing
+const user1 = {username:"yash kumar",workingTime:9, town:"jaipur"}
+
+const {username:profilename,workingTime :timing,town } = user1
+console.log(profilename)
+console.log(timing)
+
+
+
+// 12. Destructure any property of an object and use spread operator
+//     to get remaining properties in an object
+
+const posts = {
+    id:1,
+    title:"this is title",
+    description:"this is description",
+    totalPosts:100,
+
+}
+const { id, ...remaining} = posts
+
+console.log(id)
+console.log(remaining)
+
+
+// 13. Create a new object by copying using spread operator, override
+//     one of the properties to assign a new value in the same step
+
+const rePosts = {...posts,title:{title:"title has changed"} }
+console.log(rePosts)
+const {title} = rePosts
+console.log(title)
+
+// 14. Use reduce function on array and object
+
+const numbers = [12,3,4,67,8];
+
+const sum = numbers.reduce((pre,curr)=>{
+        pre += curr
+
+        return pre
+},0)
+console.log(sum);
